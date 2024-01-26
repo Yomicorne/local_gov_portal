@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard - Local Government Job Recruitment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #2ecc71;
+            padding: 10px, 20px;
+            text-align: center;
+            color: #fff;
+        }
+        header img {
+            width: 100px; /* Set the width of your logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+        header nav {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+        header nav a {
+            color: white;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 0px;
+            margin-right: 10px;
+        }
+        nav a:last-child {
+            margin-right: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ffffff;
+            padding: 0px 1px 50px 1px;
+        }
+         h2 {
+            color: #ffffff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        button {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="navbar-brand" href="{% url 'index' %} ">HOME</a>
+            <a class="nav-link" href="{% url 'apply' %}">APPLY</a>
+            <a class="nav-link" href="{% url 'admin' %}">ADMIN</a>    
+        </nav>
+        <img src="image/nigeria.jpg"><h1>Employer Dashboard</h1>
+    </header>
+
+    <main>
+        <h2>Applicant Information</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Contact Number</th>
+                    <th>Qualification</th>
+                    <th>Skills</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sample data, replace with actual applicant information -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>1990-01-01</td>
+                    <td>123-456-7890</td>
+                    <td>Bachelor's Degree</td>
+                    <td>Communication, Organization</td>
+                    <td><button>View Details</button></td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>1985-05-15</td>
+                    <td>987-654-3210</td>
+                    <td>Master's Degree</td>
+                    <td>Leadership, Project Management</td>
+                    <td><button>View Details</button></td>
+                </tr>
+                <!-- Add more rows for additional applicants -->
+            </tbody>
+        </table>
+    </main>
+
+</body>
+</html>
