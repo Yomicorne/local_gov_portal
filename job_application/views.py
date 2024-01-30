@@ -3,6 +3,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'job_application/index.html')
 
+def details(request):
+    return render(request, 'job_application/details.html')
+
 def apply(request):
     return render(request, 'job_application/apply.html')
 

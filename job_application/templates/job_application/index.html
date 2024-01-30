@@ -1,130 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Government Job Recruitment</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
+{% extends "job_application/layout.html"%}
+{% load static %}
 
-        header {
-            background-color: #2ecc71;
-            padding: 10px, 20px;
-            text-align: center;
-            color: #fff;
-        }
-        header img {
-            width: 100px; /* Set the width of your logo */
-            height: auto; /* Maintain aspect ratio */
-        }
-        header nav {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-        }
-
-        header nav a {
-            color: white;
-            font-size: 14px;
-            text-decoration: none;
-            padding: 0px;
-            margin-right: 10px;
-        }
-        nav a:last-child {
-            margin-right: 0;
-        }
-       
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: #ffffff;
-            padding: 10px 10px 50px 20px;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        button {
-            background-color: #2ecc71;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button a {
-            color: white;
-            text-decoration: none;
-        }
-        button:hover {
-            background-color: #27ae60;
-        }
-    </style>
-</head>
-<body>
-    
+{% block body %}
     <header>
         <nav>
-            <a class="navbar-brand" href="{% url 'index' %} ">HOME</a>
-            <a class="nav-link" href="{% url 'apply' %}">APPLY</a>
-            <a class="nav-link" href="{% url 'admin' %}">ADMIN</a>    
+            <a  href="{% url 'index' %} ">HOME</a>
+            <a  href="{% url 'apply' %}">APPLY</a>
+            <a  href="{% url 'admin' %}">ADMIN</a>    
         </nav>
-        <img src="image/nigeria.jpg"><h1>Local Government Job Recruitment</h1>
+        <img src="{% static 'job_application/nigeria.jpg' %}"><h1>Local Government Job Recruitment</h1>
     </header>
 
+
     <main>
-        <img src="your_image_url.jpg" >
-        <h2>Job Title: Administrative Assistant</h2>
-
-        <h3>Requirements:</h3>
+        <h2>Available Positions:</h2>
+        
         <ul>
-            <li>Minimum educational qualification: Bachelor's Degree</li>
-            <li>Experience in administrative roles</li>
-            <li>Strong organizational and communication skills</li>
+            <li>
+                <a href="{% url 'details' %} ">
+                    <h3>Administrative Assistant</h3>
+                
+                    <p>
+                        The Administrative Assistant will play a key role in supporting the daily administrative operations of the local government office. Responsibilities include managing schedules, handling correspondence, and coordinating office activities.
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'details' %} ">
+                    <h3>Finance Officer</h3>
+                
+                    <p>
+                        The Finance Officer will be responsible for managing financial transactions, budgeting, and accounting for the local government. This role involves ensuring compliance with financial regulations, preparing financial reports, and providing financial advice to department heads.
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'details' %} ">
+                    <h3>Community Development Specialist</h3>
+                
+                    <p>
+                        The Community Development Specialist will coordinate and implement community development projects and initiatives. This includes engaging with local communities, conducting needs assessments, and collaborating with stakeholders to enhance community well-being.
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'details' %} ">
+                    <h3>Environmental Planner</h3>
+                
+                    <p>
+                        The Environmental Planner will contribute to sustainable development by planning and managing environmental initiatives. Responsibilities include conducting environmental impact assessments, developing environmental policies, and collaborating with government agencies and environmental organizations.
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'details' %} ">
+                    <h3>IT Support Specialist</h3>
+                
+                    <p>
+                        The IT Support Specialist will provide technical support for the local government's IT infrastructure and systems. This role involves troubleshooting hardware and software issues, maintaining network security, and assisting staff with IT-related concerns.
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'details' %} ">
+                    <h3>Public Relations Manager</h3>
+                
+                    <p>
+                        The Public Relations Manager will be responsible for managing communication strategies and public relations for the local government. This includes crafting press releases, managing media relations, and developing communication plans to enhance the local government's public image.
+                    </p>
+                </a>
+            </li>
         </ul>
-
-        <h3>Qualifications:</h3>
-        <ul>
-            <li>Bachelor's Degree in Business Administration or related field</li>
-            <li>Excellent computer skills (MS Office, Excel, etc.)</li>
-        </ul>
-
-        <h3>Responsibilities:</h3>
-        <p>The Administrative Assistant will be responsible for managing office operations, organizing meetings, handling correspondence, and providing support to senior staff members.</p>
-
-        <h3>How to Apply:</h3>
-        <p>Interested candidates should submit their resume, cover letter, and relevant documents to hr@localgovernment.gov. Please mention "Admin Assistant Application" in the email subject.</p>
-
-        <button><a class="nav-link" href="{% url 'apply' %}">APPLY NOW</a></button>
     </main>
 
-</body>
-</html>
+{% endblock %}

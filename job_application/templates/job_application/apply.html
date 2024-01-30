@@ -1,106 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply for Local Government Job</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
+{% extends "job_application/layout.html"%}
+{% load static %}
 
-        header {
-            background-color: #2ecc71;
-            padding: 10px, 20px;
-            text-align: center;
-            color: #fff;
-        }
-        header img {
-            width: 100px; /* Set the width of your logo */
-            height: auto; /* Maintain aspect ratio */
-        }
-        header nav {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-        }
-        header nav a {
-            color: white;
-            font-size: 14px;
-            text-decoration: none;
-            padding: 0px;
-            margin-right: 10px;
-        }
-        nav a:last-child {
-            margin-right: 0;
-        }
+{% block body %}
+        
 
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #ffffff;
-            padding: 0px 1px 50px 1px;
-        }
-        h2 {
-            color: #ffffff;
-        }
-
-        form {
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        input[type="file"] {
-            margin-top: 5px;
-        }
-
-        button {
-            background-color: #2ecc71;
-            color: #fff;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #27ae60;
-        }
-    </style>
-</head>
-<body>
     <header>
         <nav>
-            <a class="navbar-brand" href="{% url 'index' %} ">HOME</a>
-            <a class="nav-link" href="{% url 'apply' %}">APPLY</a>
-            <a class="nav-link" href="{% url 'admin' %}">ADMIN</a>    
+            <a  href="{% url 'index' %} ">HOME</a>
+            <a  href="{% url 'apply' %}">APPLY</a>
+            <a  href="{% url 'admin' %}">ADMIN</a>     
         </nav>
-        <img src="image/nigeria.jpg"><h1>Apply for Local Government Job</h1>
+        <img src="{% static 'job_application/nigeria.jpg' %}"><h1>Apply for Local Government Job</h1>
     </header>
 
     <main>
@@ -138,6 +48,4 @@
             <button type="submit">Submit Application</button>
         </form>
     </main>
-
-</body>
-</html>
+{% endblock %}
